@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+  <name>mod_navigationary</name>
+  <author>Gruz</author>
+  <creationDate>2016-02-28</creationDate>
+  <copyright>Copyright (C) 2004-2016 Gruz All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>arygroup@gmail.com</authorEmail>
+  <authorUrl>http://gruz.org.ua/en/extensions/navigationary.html</authorUrl>
+  <version>1.0.0</version>
+  <description>MOD_NAVIGATIONARY_XML_DESCRIPTION</description>
+  <!--
+	<customContent />
+-->
+  <files>
+    
+    
+    
+    
+  <folder>extensions</folder><folder>language</folder><folder>tmpl</folder><filename>README.md</filename><filename module="mod_navigationary">mod_navigationary.php</filename></files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="only_main_level" type="list" default="1" description="MOD_NAVIGATIONARY_ONLY_MAIN_LEVEL_DESC" label="MOD_NAVIGATIONARY_ONLY_MAIN_LEVEL">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+        <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+        <field name="cachemode" type="hidden" default="static">
+          <option value="static"/>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  
+<updateservers><servers type="extension" priority="1" name="navigationary">http://gruz.org.ua/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=17&amp;dummy=extension.xml</servers></updateservers></extension>
